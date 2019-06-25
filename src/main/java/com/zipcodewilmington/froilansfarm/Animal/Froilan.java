@@ -8,7 +8,7 @@ import java.util.List;
 
 public class Froilan extends Farmer implements Person, Driver, NoiseMaker, Eater {
 
-  
+
 
 
     List<Edible> foodEaten = new ArrayList<Edible>();
