@@ -3,17 +3,16 @@ package com.zipcodewilmington.froilansfarm.Shelter;
 
 
 import com.zipcodewilmington.froilansfarm.Vehicles.CropDuster;
-import com.zipcodewilmington.froilansfarm.Vehicles.FarmVehicle;
 import com.zipcodewilmington.froilansfarm.Vehicles.Tractor;
-import com.zipcodewilmington.froilansfarm.Vehicles.Vehicle;
+
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Garage implements Shelter {
 
-    List<Tractor> tractors = new ArrayList<>();
-    List<CropDuster> cropDusters = new ArrayList<>();
+   private List<Tractor> tractors = new ArrayList<>();
+   private List<CropDuster> cropDusters = new ArrayList<>();
 
 
     public Garage() {}
@@ -71,4 +70,3 @@ public class Garage implements Shelter {
         return null;
     }
 }
-
