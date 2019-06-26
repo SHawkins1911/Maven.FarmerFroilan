@@ -53,8 +53,8 @@ public class Director {
 
                 Horse horse = horses.get(j);
                 for(int k = 0; k < 3; k++) {
-                    froilan.feedFarmAnimals(horse, farm.getEarOfCornFoodStorage().retrieve());
-                    froilanda.feedFarmAnimals(horse, farm.getEarOfCornFoodStorage().retrieve());
+                    //froilan.feedFarmAnimals(horse, farm.getEarOfCornFoodStorage().retrieve());
+                    //froilanda.feedFarmAnimals(horse, farm.getEarOfCornFoodStorage().retrieve());
                 }
             }
         }
