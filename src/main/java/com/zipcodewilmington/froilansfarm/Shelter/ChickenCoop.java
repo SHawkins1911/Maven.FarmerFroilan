@@ -30,7 +30,9 @@ public class ChickenCoop implements Shelter {
         return chickenCoop.size();
     }
 
-
+    public List<Chicken> getChickenCoop() {
+        return chickenCoop;
+    }
 
     @Override
     public void add() {

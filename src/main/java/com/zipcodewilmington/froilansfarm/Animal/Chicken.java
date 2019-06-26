@@ -42,8 +42,8 @@ public class Chicken extends Produce implements Animal {
     }
 
     @Override
-    public Bounty yield() {
-        return null;
+    public Eggs yield() {
+        return new Eggs();
     }
 
 }

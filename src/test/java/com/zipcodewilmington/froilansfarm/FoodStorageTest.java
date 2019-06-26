@@ -44,7 +44,7 @@ public class FoodStorageTest {
         foodStorage.add(tomato);
         foodStorage.add(cucumber);
         foodStorage.add(cucumber);
-        foodStorage.retrieve(tomato);
+        foodStorage.retrieve();
         Assert.assertEquals(2, foodStorage.itemCount(),0.0001);
     }
     @Test
@@ -53,7 +53,7 @@ public class FoodStorageTest {
         Cucumber cucumber=new Cucumber();
         foodStorage.add(cucumber);
         foodStorage.add(cucumber);
-        foodStorage.retrieve(cucumber);
+        foodStorage.retrieve();
         Assert.assertEquals(1, foodStorage.itemCount(),0.0001);
     }
     @Test
@@ -65,7 +65,7 @@ public class FoodStorageTest {
         foodStorage.add(cucumber);
         foodStorage.add(corn);
         foodStorage.add(corn);
-        foodStorage.retrieve(corn);
+        foodStorage.retrieve();
         Assert.assertEquals(2, foodStorage.itemCount(),0.0001);
     }
     @Test
@@ -77,7 +77,7 @@ public class FoodStorageTest {
         foodStorage.add(cucumber);
         foodStorage.add(corn);
         foodStorage.add(corn);
-        foodStorage.retrieve(corn);
+        foodStorage.retrieve();
         Assert.assertFalse(foodStorage.isEmpty());
     }
 
@@ -86,7 +86,7 @@ public class FoodStorageTest {
         FoodStorage foodStorage = new FoodStorage();
         Cucumber cucumber = new Cucumber();
         foodStorage.add(cucumber);
-        foodStorage.retrieve(cucumber);
+        foodStorage.retrieve();
         Assert.assertTrue(foodStorage.isEmpty());
     }
     @Test
@@ -98,7 +98,7 @@ public class FoodStorageTest {
         foodStorage.add(cucumber);
         foodStorage.add(corn);
         foodStorage.add(corn);
-        foodStorage.retrieve(corn);
+        foodStorage.retrieve();
         Assert.assertEquals(2.0, foodStorage.itemCount(),0.0001);
     }
     @Test
@@ -110,7 +110,7 @@ public class FoodStorageTest {
         foodStorage.add(cucumber);
         foodStorage.add(corn);
         foodStorage.add(corn);
-        foodStorage.retrieve(corn);
+        foodStorage.retrieve();
         Assert.assertNotEquals(0.0, foodStorage.itemCount(),0.0001);
     }
 }

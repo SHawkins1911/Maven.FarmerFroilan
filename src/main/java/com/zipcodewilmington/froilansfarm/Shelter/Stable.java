@@ -29,6 +29,10 @@ public class  Stable implements Shelter {
         return stable.size();
     }
 
+    public List<Horse> getStable() {
+        return stable;
+    }
+
     @Override
     public void add() {
 
