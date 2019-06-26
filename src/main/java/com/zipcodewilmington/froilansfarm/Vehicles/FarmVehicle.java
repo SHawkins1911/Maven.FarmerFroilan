@@ -1,5 +1,6 @@
 package com.zipcodewilmington.froilansfarm.Vehicles;
 
-public interface FarmVehicle {
-    public boolean isFarmVehicle();
+
+public interface FarmVehicle extends Vehicle{
+
 }

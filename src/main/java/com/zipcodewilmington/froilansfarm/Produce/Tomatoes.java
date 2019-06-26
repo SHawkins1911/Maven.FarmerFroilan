@@ -1,23 +1,11 @@
 package com.zipcodewilmington.froilansfarm.Produce;
 
-import com.zipcodewilmington.froilansfarm.Tomato;
 
-import java.util.List;
+public class Tomatoes extends Bounty<Tomato> {
 
-
-    public class Tomatoes implements Edible {
-
-        private List<Tomato> Tomatoes;
-
-        public List<Tomato> getTomatoes() {
-            return Tomatoes;
+        public Tomato[] store() {
+            Tomato[] food = bounty.toArray(new Tomato[0]);
+            return food;
         }
 
-        public void setTomatoes(List<Tomato> tomatoes) {
-            Tomatoes = tomatoes;
-        }
-        public void addTomatoes(List<Tomato> tomatoes){
-
-            Tomatoes.addAll(tomatoes);
-        }
 }

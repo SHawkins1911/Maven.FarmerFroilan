@@ -1,23 +1,47 @@
 package com.zipcodewilmington.froilansfarm.Shelter;
 
+import com.zipcodewilmington.froilansfarm.Animal.Chicken;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class ChickenCoop implements Shelter {
+    List<Chicken> chickenCoop = new ArrayList<>();
+
+    public ChickenCoop() {
+    }
+
     public Boolean isEmpty() {
-        return null;
+        return chickenCoop.isEmpty();
     }
 
-    public Boolean atCapacity() {
-        return null;
+    public void add(Chicken chicken) {
+        chickenCoop.add(chicken);
     }
 
-    public Boolean add() {
-        return null;
+    public void remove(Chicken chicken) {
+        chickenCoop.remove(chicken);
     }
 
-    public Boolean remove() {
-        return null;
-    }
+
 
     public Integer itemCount() {
-        return null;
+
+        return chickenCoop.size();
+    }
+
+    public List<Chicken> getChickenCoop() {
+        return chickenCoop;
+    }
+
+    @Override
+    public void add() {
+
+    }
+
+    @Override
+    public void remove() {
+
+
     }
 }

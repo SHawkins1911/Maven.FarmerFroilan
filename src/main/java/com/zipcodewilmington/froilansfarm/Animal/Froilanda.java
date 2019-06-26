@@ -1,19 +1,31 @@
 package com.zipcodewilmington.froilansfarm.Animal;
 
-public class Froilanda extends Farmer implements Rider, Pilot, NoiseMaker, Eater {
-    public boolean makesNoise() {
-        return false;
-    }
+import com.zipcodewilmington.froilansfarm.Produce.Edible;
 
-    public boolean canFly() {
-        return false;
-    }
+import com.zipcodewilmington.froilansfarm.Vehicles.Flyable;
 
-    public boolean canMoutn() {
-        return false;
-    }
 
-    public boolean canDismount() {
-        return false;
-    }
+import java.util.ArrayList;
+import java.util.List;
+
+public class Froilanda extends Farmer implements Pilot {
+
+        List<Edible> foodEaten = new ArrayList<Edible>();
+
+        public Froilanda() {
+            super("Froilanda");
+        }
+
+        public void eatEdible(Edible food) {
+                    foodEaten.add(food);
+        }
+
+        public List<Edible> getFoodEaten() {
+            return foodEaten;
+        }
+
+        @Override
+        public String makeNoise() {
+            return "Welcome to Froilan's farm. I'm Froilanda; the rootinest, tootinest pilot down in these parts!";
+        }
 }

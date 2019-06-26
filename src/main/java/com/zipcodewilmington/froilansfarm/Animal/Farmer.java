@@ -1,28 +1,73 @@
 package com.zipcodewilmington.froilansfarm.Animal;
 
-    import com.zipcodewilmington.froilansfarm.Crops.CropRow;
-    import com.zipcodewilmington.froilansfarm.Crops.TomatoPlant;
-    import com.zipcodewilmington.froilansfarm.Produce.Tomatoes;
-    import com.zipcodewilmington.froilansfarm.Tomato;
-    import com.zipcodewilmington.froilansfarm.Vehicles.Tractor;
+import com.zipcodewilmington.froilansfarm.Crops.CropRow;
+import com.zipcodewilmington.froilansfarm.Crops.Crops;
+import com.zipcodewilmington.froilansfarm.Produce.*;
+import com.zipcodewilmington.froilansfarm.Vehicles.Rideable;
+import com.zipcodewilmington.froilansfarm.Vehicles.Driveable;
 
-    import java.util.List;
+import java.util.ArrayList;
+import java.util.List;
+public class Farmer implements Person, Botanist, Rider, Driver {
 
-    public class Farmer implements Botanist {
+        List<Edible> foodEaten = new ArrayList<Edible>();
 
-        Tomato tomato=new Tomato();
-        public Tomatoes harvest(CropRow<TomatoPlant> tomatorow){
-            Tractor tractor = new Tractor();
-            Tomatoes tomatoes = new Tomatoes();
-            List<TomatoPlant> tomatoPlantsInTheRow = tomatorow.getTplant();
-            for (TomatoPlant tomatoPlantInTheRow:tomatoPlantsInTheRow)
-            {
-               // tomatoes.addTomatoes(tractor.harvest(tomatoPlantInTheRow));
-            }return tomatoes;
+        public Farmer(String name){
         }
-        // public Tomatoes tomatoesStorage(){
-        // FoodStorage<tomato> tomnotostorage;
-//tomnotostorage.add(tomato)
 
+        public List<Edible> harvest() { return null;
+                //Determine harvest behavior later
+//                List<Edible> harvestCrops = new ArrayList<Edible>();
+//                Tomatoes tomatoes = new Tomatoes();
+//                StringBeans stringbeans = new StringBeans();
+//                Cucumbers cucumbers = new Cucumbers();
+//                EarOfCorn corn = new EarOfCorn();
+//                harvestCrops.add(tomatoes);
+//                harvestCrops.add(stringbeans);
+//                harvestCrops.add(cucumbers);
+//                harvestCrops.add(corn);
+//                return harvestCrops;
+        }
+
+        public List<Edible> getFoodEaten() {
+                return foodEaten;
+            }
+
+
+        public void plant(Crops crops, CropRow cropRow) {
+
+        }
+
+        public void drive(Driveable vehicle) {
+
+        }
+
+        public void ceaseDrive(Driveable vehicle) {
+
+        }
+
+        public void mount(Rideable rideable) {
+
+        }
+
+        public void dismount(Rideable rideable) {
+
+
+        }
+
+        public void feedFarmAnimals(Eater animal, Edible food) {
+
+        }
+
+        public void eatEdible(Edible food) {
+
+        }
+
+        @Override
+        public String makeNoise() {
+            return null;
+        }
     }
+
+
 

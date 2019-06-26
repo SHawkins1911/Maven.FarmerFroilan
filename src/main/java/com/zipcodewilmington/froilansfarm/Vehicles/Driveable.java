@@ -1,5 +1,9 @@
 package com.zipcodewilmington.froilansfarm.Vehicles;
 
-public interface Driveable {
-    public boolean isDriveable();
+import com.zipcodewilmington.froilansfarm.Animal.Driver;
+import com.zipcodewilmington.froilansfarm.Animal.Rider;
+
+public interface Driveable extends Vehicle {
+
+   public boolean isDriver(Rider rider);
 }

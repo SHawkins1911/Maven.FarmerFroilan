@@ -1,40 +1,71 @@
+
 package com.zipcodewilmington.froilansfarm.Shelter;
 
+
 import com.zipcodewilmington.froilansfarm.Vehicles.CropDuster;
-import com.zipcodewilmington.froilansfarm.Vehicles.FarmVehicle;
 import com.zipcodewilmington.froilansfarm.Vehicles.Tractor;
+
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Garage implements Shelter {
-    List<FarmVehicle>  farmVehicles=new ArrayList<FarmVehicle>();
-    Tractor tractor1=new Tractor();
-    Tractor tractor2=new Tractor();
-    CropDuster cropDuster=new CropDuster();
-    public int total(){
-        farmVehicles.add(tractor1);
-        farmVehicles.add(tractor2);
-        farmVehicles.add(cropDuster);
-        return farmVehicles.size();
-    }
+
+   private List<Tractor> tractors = new ArrayList<>();
+   private List<CropDuster> cropDusters = new ArrayList<>();
+
+
+    public Garage() {}
+
 
     public Boolean isEmpty() {
-        return null;
+        if (tractors.isEmpty() && cropDusters.isEmpty()){
+            return true;
+        }
+        return false;
     }
 
-    public Boolean atCapacity() {
-        return null;
+    public void add(Tractor tractor) {
+        tractors.add(tractor);
     }
 
-    public Boolean add() {
-        return null;
+    public void remove(Tractor tractor) {
+        tractors.remove(tractor);
     }
 
-    public Boolean remove() {
-        return null;
+    public Integer tractorCount(){
+        return tractors.size();
     }
 
+    public void add(CropDuster cropDuster) {
+        cropDusters.add(cropDuster);
+    }
+
+    public void remove(CropDuster cropDuster) {
+        cropDusters.remove(cropDuster);
+    }
+
+    public Integer cropDusterCount(){
+        return cropDusters.size();
+    }
+
+    public Integer totalItemCount() {
+
+        return tractorCount() + cropDusterCount();
+    }
+
+    @Override
+    public void add() {
+
+    }
+
+    @Override
+    public void remove() {
+
+
+    }
+
+    @Override
     public Integer itemCount() {
         return null;
     }

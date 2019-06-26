@@ -1,26 +1,42 @@
 package com.zipcodewilmington.froilansfarm;
 
 
-import com.zipcodewilmington.froilansfarm.Animal.Farmer;
-import com.zipcodewilmington.froilansfarm.Shelter.Shelter;
 
+import com.zipcodewilmington.froilansfarm.Produce.Edible;
+
+
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Stack;
 
-public class FoodStorage<T> implements Shelter {
 
-    Farmer farmer = new Farmer();
+public class FoodStorage<T extends Edible>  {
+    private Stack<T> foodStorage;
 
-    private List<T> foodStorage;
+    public FoodStorage(Stack<T> foodStorage) {
+        this.foodStorage = foodStorage;
+    }
 
-    public void add(T production) {
-        foodStorage.add(production);
+    public FoodStorage() {
+    this.foodStorage=new Stack<>();
+    }
+//    public FoodStorage() {
+//        this.foodStorage=new T[100];
+//    }
+
+    public void add(T edible) {
+        foodStorage.add(edible);
 
     }
 
-    public T retrieve(T consumption) {
+    public void add(T[] edibles) {
+        for (T edible : edibles) {
+            add(edible);
+        }
+    }
 
-        foodStorage.remove(consumption);
-        return consumption;
+    public T retrieve() {
+        return foodStorage.pop();
     }
 
     public List<T> getT() {
@@ -30,15 +46,16 @@ public class FoodStorage<T> implements Shelter {
     public void setT(List<T> t) {
         this.foodStorage = foodStorage;
     }
+
+
+    public Boolean isEmpty() {
+        return foodStorage.isEmpty();
+    }
+
+
+    public Integer itemCount() { return foodStorage.size(); }
 }
 
-//    public void setTomatoStorage(){
-//        Tomatoes tomatoes=new Tomatoes();
-//        FoodStorage<Tomato> tomatoStorage= new FoodStorage<Tomato>();
-//                tomatoStorage.add(tomatoes.getTomatoes());
-//       // farmer.harvest()
-//    }
 
 
-//FoodStorage<tomato> tomnotostorage;
-//tomnotostorage.add(tomato)
+
