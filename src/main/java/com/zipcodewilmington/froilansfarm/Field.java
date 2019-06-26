@@ -2,14 +2,16 @@ package com.zipcodewilmington.froilansfarm;
 
 
 
+
 import com.zipcodewilmington.froilansfarm.Crops.CropRow;
 
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
+
 
 public  class Field {
+
 
     private List<CropRow> field = new ArrayList<>();
 
@@ -17,6 +19,7 @@ public  class Field {
     public Field(){
 
     }
+
 
 
 

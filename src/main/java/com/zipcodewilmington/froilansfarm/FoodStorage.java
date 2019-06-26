@@ -7,17 +7,18 @@ import com.zipcodewilmington.froilansfarm.Produce.Edible;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Stack;
 
 
 public class FoodStorage<T extends Edible>  {
-    private List<T> foodStorage;
+    private Stack<T> foodStorage;
 
-    public FoodStorage(List<T> foodStorage) {
+    public FoodStorage(Stack<T> foodStorage) {
         this.foodStorage = foodStorage;
     }
 
     public FoodStorage() {
-    this.foodStorage=new ArrayList<>();
+    this.foodStorage=new Stack<>();
     }
 //    public FoodStorage() {
 //        this.foodStorage=new T[100];
@@ -28,10 +29,14 @@ public class FoodStorage<T extends Edible>  {
 
     }
 
-    public T retrieve(T edible) {
-            if(foodStorage.contains(edible))
-        foodStorage.remove(edible);
-        return edible;
+    public void add(T[] edibles) {
+        for (T edible : edibles) {
+            add(edible);
+        }
+    }
+
+    public T retrieve() {
+        return foodStorage.pop();
     }
 
     public List<T> getT() {

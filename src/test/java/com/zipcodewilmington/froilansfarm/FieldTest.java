@@ -122,7 +122,7 @@ public class FieldTest {
         field1.remove(cropRow1);
         field1.remove(cropRow2);
 
-        Integer expected = null;
+        Integer expected = 0;
         Integer actual = field1.itemCount();
 
         assertEquals(expected, actual);

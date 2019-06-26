@@ -22,17 +22,14 @@ public class CropDuster implements FarmVehicle,NoiseMaker, Flyable {
 
     public void fly() {
         CropRow cropRow = new CropRow();
-        if (this instanceof Flyable)
-            this.fertilize(cropRow);
+        if (this instanceof Flyable) this.fertilize(cropRow);
 
     }
 
-    @Override
-    public boolean land() {
-        return false;
-    }
 
     public boolean fertilizing() {
+        return false;
+    }
 
 
     public boolean flying(){
@@ -43,30 +40,25 @@ public class CropDuster implements FarmVehicle,NoiseMaker, Flyable {
     }
 
 
-    public boolean land() {
-        if (flying() == true)
-
-            if (fertilizing() == true)
-
-                return false;
-            else
-                return true;
-    }
 
     public boolean land() {
-        if(flying()==true)
-        return false;
-        else
+        if(flying()==true) {
+            return false;
+        }
+        else {
             return true;
+        }
     }
 
 
     @Override
     public boolean isPilot(Rider rider) {
-        if(rider instanceof Pilot)
+        if(rider instanceof Pilot) {
             return true;
-        else
-        return false;
+        }
+        else {
+            return false;
+        }
     }
 
 
